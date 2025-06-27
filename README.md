@@ -37,7 +37,5 @@ You can use the terminal version of this game which gives you a pretty simple ex
 - **GUI**: QT6
 
 ## TODO
-- [ ] Add more words and options to the game.
-- [ ] Add the scoring system.
-- [ ] Design a beautiful GUI.
+- [ ] Develop the application(whith a beautiful GUI and the best features).
      
