@@ -23,11 +23,18 @@ To run this game in your terminal, follow the steps below:
      git clone https://github.com/mm-ansarian/guess_the_word.git
      ```
   3. Open the project folder.
-  4. Run `app.py`(using your IDE or your terminal).
+  4. Run `terminal_game.py`(using your IDE or your terminal).
   5. Enjoy 😉
 
-## Used Tools
-- **Programming language**: Python
+#### Using the the application(Including GUI and the best features)
+We are trying hard to improve the graphical user interface of this application; But it's not ready yet...
+You can use the terminal version of this game which gives you a pretty simple experience; But if you want to have the best experience, you can wait for the main application(including a beautiful GUI and the best features) to be made. 😊
+
+## Details
+- **Operation System**: Windows 10/11
+- **Programming language**: Python3
+- **Database**: SQLite3
+- **GUI**: QT6
 
 ## TODO
 - [ ] Add more words and options to the game.
