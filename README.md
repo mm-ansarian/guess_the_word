@@ -27,8 +27,29 @@ To run this game in your terminal, follow the steps below:
   5. Enjoy 😉
 
 #### Using the the application(Including GUI and the best features)
-We are trying hard to improve the graphical user interface of this application; But it's not ready yet...
-You can use the terminal version of this game which gives you a pretty simple experience; But if you want to have the best experience, you can wait for the main application(including a beautiful GUI and the best features) to be made. 😊
+We have also provided you a very beautiful graphical user interface so you can run this game as a 
+executable file that allows you to have more facilities.
+After installing `python3`, cloning the project and installing the requirements using `pip install -r requirements.txt` command, You can run the game easily by running `app.py`. 
+But, if you want to have an executable fila from this project and run it as a real application, follow the steps bellow:
+  1. Install `python3` on your system.
+  2. Clone the project repository using `git`:
+     ```bash
+     git clone git@github.com:mm-ansarian/guess_the_word.git
+     ```
+     or
+     ```bash
+     git clone https://github.com/mm-ansarian/guess_the_word.git
+     ```
+  3. Install the required packages in your virtual environment.
+  4. Install the `pyintaller` package in your venv or system.
+  5. Use this command to make `Guess the Word.exe` in your current directory:
+      ```bash
+      pyinstaller --noconfirm --onefile --windowed --icon "<path_to_the_project_folder>\icons\Main_icon.ico" --name "Guess the Word" --add-data "<path_to_the_project_folder>\icons\Main_icon.ico;." --add-data "<path_to_the_project_folder>\icons;icons/"  "<path_to_the_project_folder\app.py"
+      ```
+  6. Enjoy 😉🎉
+
+**If you notice any bugs or problems, I'll be very grateful if you tell me or help me to develop this application 🌱**
+
 
 ## Details
 - **Operation System**: Windows 10/11
@@ -37,5 +58,7 @@ You can use the terminal version of this game which gives you a pretty simple ex
 - **GUI**: QT6
 
 ## TODO
-- [ ] Develop the application(whith a beautiful GUI and the best features).
+- [X] Develop the application(with a beautiful GUI and the best features).
+- [ ] Style the project`s source code.
+- [ ] Using the best algorithms and design patterns for the project as the final step.
      
