@@ -26,7 +26,7 @@ To run this game in your terminal, follow the steps below:
   4. Run `terminal_game.py`(using your IDE or your terminal).
   5. Enjoy 😉
 
-#### Using the the application(Including GUI and the best features)
+#### Using the application(Including GUI and the best features)
 We have also provided you a very beautiful graphical user interface so you can run this game as a 
 executable file that allows you to have more facilities.
 After installing `python3`, cloning the project and installing the requirements using `pip install -r requirements.txt` command, You can run the game easily by running `app.py`. 
@@ -41,10 +41,16 @@ But, if you want to have an executable fila from this project and run it as a re
      git clone https://github.com/mm-ansarian/guess_the_word.git
      ```
   3. Install the required packages in your virtual environment.
+     ```bash
+     pip install -r requirements.txt
+     ```
   4. Install the `pyintaller` package in your venv or system.
+     ```bash
+     pip install pyinstaller
+     ```
   5. Use this command to make `Guess the Word.exe` in your current directory:
       ```bash
-      pyinstaller --noconfirm --onefile --windowed --icon "<path_to_the_project_folder>\icons\Main_icon.ico" --name "Guess the Word" --add-data "<path_to_the_project_folder>\icons\Main_icon.ico;." --add-data "<path_to_the_project_folder>\icons;icons/"  "<path_to_the_project_folder\app.py"
+      pyinstaller --noconfirm --onefile --windowed --icon "<path_to_the_project_folder>\icons\Main_icon.ico" --name "Guess the Word" --add-data "<path_to_the_project_folder>\icons\Main_icon.ico;." --add-data "<path_to_the_project_folder>\icons;icons/"  "<path_to_the_project_folder>\app.py"
       ```
   6. Enjoy 😉🎉
 
@@ -59,6 +65,7 @@ But, if you want to have an executable fila from this project and run it as a re
 
 ## TODO
 - [X] Develop the application(with a beautiful GUI and the best features).
+- [ ] Add dark mode feature.
 - [ ] Style the project`s source code.
 - [ ] Using the best algorithms and design patterns for the project as the final step.
      
