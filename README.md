@@ -1,6 +1,6 @@
 ## Introduction
 "Guess the Word" is an entertaining and simple game about the English words.
-If you like, you can run it in terminal(the terminal version of this game is available right now). Or you can play this game in its own special GUI(it's still not designed, but it will be completed soon).
+If you like, you can run it in terminal(the terminal version of this game is available right now). Or you can play this game in its own special GUI!
 
 ## How to Play
 In this game, a word is selected. You don't know what is the selected word and you should find the selected word by guessing each letter of the word.
