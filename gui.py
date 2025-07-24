@@ -467,8 +467,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.loading_page(3, self.init_main_game_signal)
         else:
             self.loading_page(8, self.choose_level_page)
-            Database.setup_database()
-
+            
     def setup_signals(self):
         self.tab_widget.currentChanged.connect(lambda: UiReactions.tab_index_changed(self))
         self.basic_lvl_button.clicked.connect(lambda: UiReactions.choose_level_signal(self, 'basic'))
@@ -560,15 +559,17 @@ class UiReactions(MainWindow):
         self.intermediate_lvl_button.setVisible(False)
         self.professional_lvl_button.setVisible(False)
         self.expert_lvl_button.setVisible(False)
+        Database.setup_database()
         Database.edit_level(level=level)
         self.loading_page(1, self.init_main_game_signal, text='.Loading.')
 
     def change_LVL_btn_clicked(self):
-        status = message_box(
-            title='Attention',
-            text="Changing the game level will set your current score to 0. Do you want to continue?",
-            number=36
-        )
+        if self.current_score_number_label.text() != '0':
+            status = message_box(
+                title='Attention',
+                text="Changing the game level will set your current score to 0. Do you want to continue?",
+                number=36
+            )
         self.game_LVL_combo.setEnabled(True)
         self.change_LVL_btn.setEnabled(False)
 

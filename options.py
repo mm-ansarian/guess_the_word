@@ -309,14 +309,13 @@ class MessageWindow(QWidget):
         return lose
     
     
-
 class PrimaryActions:
     def choose_random_word(self, obj):
         result = Database.fetch_everything()
         self.level = result.get('level')
         high_score = result.get('high_score')
         used_words = result.get('used_words')
-        self.chosen_word = used_words[0] if len(used_words) > 0 else ''
+        self.chosen_word = ''
         if self.level == 'basic':
             if len(used_words) >= len(basic_level_words_list):
                 Database.clear_words_table(self.level)
@@ -334,7 +333,6 @@ class PrimaryActions:
                 self.chosen_word = random.choice(intermediate_level_words_list)
                 while self.chosen_word in used_words:
                     self.chosen_word = random.choice(intermediate_level_words_list)
-            self.chosen_word = random.choice(intermediate_level_words_list)
             obj.attempts_left_number_label.setText('13')
             obj.game_LVL_combo.setCurrentIndex(1)
 
@@ -345,7 +343,6 @@ class PrimaryActions:
                 self.chosen_word = random.choice(professional_level_words_list)
                 while self.chosen_word in used_words:
                     self.chosen_word = random.choice(professional_level_words_list)
-            self.chosen_word = random.choice(professional_level_words_list)
             obj.attempts_left_number_label.setText('7')
             obj.game_LVL_combo.setCurrentIndex(2)
 
@@ -356,7 +353,6 @@ class PrimaryActions:
                 self.chosen_word = random.choice(expert_level_words_list)
                 while self.chosen_word in used_words:
                     self.chosen_word = random.choice(expert_level_words_list)
-            self.chosen_word = random.choice(expert_level_words_list)
             obj.attempts_left_number_label.setText('5')
             obj.game_LVL_combo.setCurrentIndex(3)
         
@@ -385,7 +381,7 @@ class PrimaryActions:
                             level=self.level,
                             score=int(obj.high_score_number_label.text())
                         )
-                        Database.edit_used_words_table(level=self.level, word=self.chosen_word)
+                    Database.edit_used_words_table(level=self.level, word=self.chosen_word)
                     MessageWindow.show_victory(
                             on_button_click=lambda: obj.loading_page(1, obj.init_main_game_signal, text='.Loading.')
                     )
